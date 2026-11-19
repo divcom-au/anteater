@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Anteater</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="popup">
+    <h1>Anteater: report a bug</h1>
+
+    <div id="setup" class="thanks" hidden>
+      <p class="thanks-title" id="setupMessage"></p>
+      <button type="button" id="openSettings">Open Settings</button>
+    </div>
+
+    <form id="form">
+      <label for="brand">Brand</label>
+      <select id="brand" required>
+        <option value="">Select a brand</option>
+      </select>
+
+      <label for="title">Title</label>
+      <input id="title" type="text" required maxlength="120" placeholder="Short summary of the problem" />
+
+      <label for="description">Description</label>
+      <textarea id="description" maxlength="5000" placeholder="What happened, and what did you expect?"></textarea>
+
+      <div id="shotSection" hidden>
+        <div class="shot-header">
+          <label class="check">
+            <input type="checkbox" id="includeShot" checked />
+            Include screenshot
+          </label>
+          <button type="button" class="link" id="clearCrop" hidden>Use full viewport</button>
+        </div>
+        <div id="cropArea" class="crop-area">
+          <img id="shot" alt="Screenshot of the current page" draggable="false" />
+          <div id="selection" class="selection" hidden></div>
+        </div>
+        <p class="hint" id="shotHint">Drag on the image to send only part of it. Check it shows no personal or customer data.</p>
+      </div>
+      <p class="hint" id="shotError" hidden></p>
+
+      <div class="actions">
+        <button type="button" class="link" id="settings">Settings</button>
+        <button type="submit" id="submit">Submit</button>
+      </div>
+    </form>
+
+    <div id="status" class="status" role="status" hidden></div>
+
+    <div id="thanks" class="thanks" role="status" hidden>
+      <p class="thanks-title">Thank you for your submission</p>
+      <p>Your report has been sent to the Digital team.</p>
+    </div>
+
+    <script src="brands.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

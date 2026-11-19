@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
-  <app appid='jigoegamngkkejdbphbjmlmdjpngnadg'>
-    <updatecheck codebase='https://dca-chrome-extensions.s3.ap-southeast-2.amazonaws.com/anteater/anteater.crx' version='0.5.1' />
-  </app>
-</gupdate>

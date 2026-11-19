@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Anteater settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Anteater settings</h1>
+
+    <form id="form">
+      <label for="reporter">Your name</label>
+      <input id="reporter" type="text" required />
+
+      <label for="secret">Shared secret</label>
+      <input id="secret" type="password" autocomplete="off" required />
+      <p class="hint">Ask the Digital team for this. Reports are ignored without it.</p>
+
+      <div class="actions">
+        <span></span>
+        <button type="submit">Save</button>
+      </div>
+    </form>
+
+    <div id="status" class="status" role="status" hidden></div>
+
+    <script src="options.js"></script>
+  </body>
+</html>
